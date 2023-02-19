@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестовое задание friendLee">
+    <title>Тестовое задание friendLee</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/Gilroy-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Nekst-Black.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
@@ -14,13 +16,59 @@
         <div class="container"></div>
       </header>
       <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+        <section class="calculator">
+          <div class="calculator__wrapper container">
+            <h1 class="calculator__title">Рассчитайте стоимость<br>автомобиля в&nbsp;лизинг</h1>
+            <form class="calculator__form">
+              <div class="calculator__item">
+                <label class="calculator__item-title" for="price">
+                  <span class="calculator__item-title-desktop">Стоимость автомобиля</span>
+                  <span class="calculator__item-title-mobile">Желаемая сумма кредита</span>
+                </label>
+                <div class="calculator__range-result calculator__range-result--price">
+                  <input class="calculator__range-result-number calculator__range-result-number--price calculator__range-result-number--hidden" type="number" min="1000000" max="3740000" value="3300000" step="1000" id="price" oninput="rangeprice.value=value">
+                  <button class="calculator__range-result-placeholder calculator__range-result-placeholder--price" type="button">3 300 000</button>
+                  <span class="calculator__range-result-text calculator__range-result-text--rouble">₽</span>
+                </div>
+                <input class="calculator__range calculator__range--price" type="range" id="rangeprice" min="1000000" max="3740000" value="3300000" step="1000"  oninput="price.value=value">
+              </div>
+              <div class="calculator__item">
+                <label class="calculator__item-title" for="contribution">Первоначальный взнос</label>
+                <div class="calculator__range-result calculator__range-result--contribution">
+                  <input class="calculator__range-result-number calculator__range-result-number--contribution calculator__range-result-number--hidden" type="number" id="contribution" min="100000" max="1055000" value="420000" step="1000" oninput="contributionrange.value=value">
+                  <button class="calculator__range-result-placeholder calculator__range-result-placeholder--contribution" type="button">420 000</button>
+                  <span class="calculator__range-result-text calculator__range-result-text--rouble calculator__range-result-text--contribution">₽</span>
+                  <div class="calculator__number-percent">
+                    <span class="calculator__number-percent-text">13%</span>
+                  </div>
+                </div>
+                <input class="calculator__range calculator__range--contribution" type="range" min="100000" max="1055000" value="420000" step="1000" id="contributionrange" oninput="contribution.value=value">
+              </div>
+              <div class="calculator__item">
+                <label class="calculator__item-title" for="term">Срок лизинга</label>
+                <div class="calculator__range-result calculator__range-result--term">
+                  <input class="calculator__range-result-number calculator__range-result-number--hidden calculator__range-result-number--term" type="number" id="term" min="6" max="71" value="60" step="1" oninput="termrange.value=value">
+                  <button class="calculator__range-result-placeholder calculator__range-result-placeholder--term" type="button">60</button>
+                  <span class="calculator__range-result-text">мес.</span>
+                </div>
+                <input class="calculator__range calculator__range--term" type="range" min="6" max="71" value="60" step="1" id="termrange"  oninput="term.value=value">
+              </div>
+              <div class="calculator__result-wrapper">
+                <span class="calculator__result-title">Сумма договора лизинга</span>
+                <div class="calculator__result">
+                  <span class="calculator__result-number">4 467 313</span>
+                  <span class="calculator__result-text">₽</span>
+                </div>
+              </div>
+              <div class="calculator__result-wrapper calculator__result-wrapper--two">
+                <span class="calculator__result-title">Ежемесячный платеж от</span>
+                <div class="calculator__result">
+                  <span class="calculator__result-number">114 455</span>
+                  <span class="calculator__result-text">₽</span>
+                </div>
+              </div>
+              <button class="calculator__button-submit" type="submit">Оставить заявку</button>
+            </form>
           </div>
         </section>
       </main>
@@ -62,3 +110,4 @@
     <script src="js/main.min.js"></script>
   </body>
 </html>
+
