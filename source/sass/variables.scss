@@ -12,6 +12,13 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
+$color-black: #111111;
+$color-matterhorn : #575757;
+$color-ghost-white : #F3F3F4; 
+$color-lavender : #EBEBEC;
+$color-dark-tangerine : #FF9514;
+$color-arsenic : #333E48;
+$color-gainsboro : #e1e1e1;
 
 // Gradient
 
@@ -29,6 +36,10 @@ $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
+$ff-nekst:                    "Nekst", "Arial", sans-serif;
+
+$ff-gilroy:                    "Gilroy", "Arial", sans-serif;
+
 // Animation
 // ---------------------------------
 
@@ -45,8 +56,11 @@ $trans-600:                         0.6s $tf-default;
 
 $vp-320:                            320px;
 $vp-375:                            375px;
+$vp-635:                            635px;
 $vp-768:                            768px;
+$vp-989:                            989px;
 $vp-1024:                           1024px;
+$vp-1120:                           1120px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
